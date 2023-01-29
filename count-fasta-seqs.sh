@@ -100,7 +100,8 @@ for filepath in "$@"
 
 do
 
-basename "$@" 
+grep ">" "$@" | wc -l
+#basename "$@" 
 #echo "$@"
 
 done
