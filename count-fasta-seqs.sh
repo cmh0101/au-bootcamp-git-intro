@@ -99,7 +99,8 @@
 for filepath in "$@"
 
 do
- 
-echo "$@"
+
+basename "$@" 
+#echo "$@"
 
 done
