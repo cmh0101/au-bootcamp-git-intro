@@ -96,12 +96,12 @@
 
 
 
-for filepath in "$@"
+for f in "$@"
 
 do
 
-grep ">" "$@" | wc -l
-#basename "$@" 
-#echo "$@"
+grep ">" "$f" | wc -l 
+basename "$f" 
+
 
 done
