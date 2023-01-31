@@ -108,3 +108,9 @@ done
 
 cat *.fasta > total.txt
 grep ">" total.txt | wc -l
+
+#CTracy comments: You are close! At the moment it is printing the number of sequences on one line and the file name on the next,
+#but the desired output is number of sequences and file name on the same line (see lines 42-45)
+#it might help to within the for loop create a variable to store the grep results and then you can call that variable and the filename with an echo on the same line
+
+
