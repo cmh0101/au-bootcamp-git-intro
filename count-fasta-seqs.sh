@@ -100,9 +100,9 @@ for f in "$@"
 
 do
 
-grep ">" "$f" | wc -l
-echo " " #to add required space
-basename "$f" 
+results=($(grep ">" "$f" | wc -l))
+echo $results $(basename "$f") 
+#basename "$f"
 
 done
 
