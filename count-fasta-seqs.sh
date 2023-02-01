@@ -102,7 +102,6 @@ do
 
 results=($(grep ">" "$f" | wc -l))
 echo $results $(basename "$f") 
-#basename "$f"
 
 done
 
@@ -113,4 +112,4 @@ grep ">" total.txt | wc -l
 #but the desired output is number of sequences and file name on the same line (see lines 42-45)
 #it might help to within the for loop create a variable to store the grep results and then you can call that variable and the filename with an echo on the same line
 
-
+#Okay, thank you!
