@@ -95,6 +95,8 @@
 # ADD YOUR CODE BELOW:
 
 
+total=0  
+
 
 for f in "$@"
 
@@ -103,13 +105,22 @@ do
 results=($(grep ">" "$f" | wc -l))
 echo $results $(basename "$f") 
 
+total=$((total + results))
+
 done
 
-cat *.fasta > total.txt
-grep ">" total.txt | wc -l
+echo $total
+
+
+#CTracy email feedback:
+#One way to approach this would be to create a variable before the for loop that is the sum of sequences and start it at zero, then within the for loop as it reads each file 
+#you can add the total number of sequences in that fasta file to the overall sum using expr. 
+#Then after the for loop you can just echo that value.
+
+
 
 #CTracy comments: You are close! At the moment it is printing the number of sequences on one line and the file name on the next,
 #but the desired output is number of sequences and file name on the same line (see lines 42-45)
 #it might help to within the for loop create a variable to store the grep results and then you can call that variable and the filename with an echo on the same line
 
-#Okay, thank you!
+
